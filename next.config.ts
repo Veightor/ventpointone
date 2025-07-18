@@ -1,14 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Enable static export for GitHub Pages
-  output: "export",
+  // Remove static export to enable API routes
+  // output: "export", // Commented out for full functionality
 
-  // Configure for GitHub Pages deployment
-  basePath: process.env.NODE_ENV === "production" ? "/ventpointone" : "",
-  assetPrefix: process.env.NODE_ENV === "production" ? "/ventpointone/" : "",
+  // Remove GitHub Pages specific paths for Vercel deployment
+  // basePath: process.env.NODE_ENV === "production" ? "/ventpointone" : "",
+  // assetPrefix: process.env.NODE_ENV === "production" ? "/ventpointone/" : "",
 
-  // Disable server-side features for static export
+  // Enable trailing slash for better compatibility
   trailingSlash: true,
 
   // Ensure proper TypeScript compilation

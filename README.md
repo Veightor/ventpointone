@@ -17,7 +17,7 @@ An AI-powered blog generation platform that transforms your interests into profe
 
 - **Frontend**: Next.js 15, React 19, TypeScript
 - **Styling**: Tailwind CSS 4
-- **Deployment**: GitHub Pages with GitHub Actions
+- **Deployment**: Vercel (recommended) or Netlify
 - **API Integration**: Custom API routes with environment-based configuration
 
 ## 🚀 Quick Start
@@ -27,6 +27,7 @@ An AI-powered blog generation platform that transforms your interests into profe
 - Node.js 18+
 - npm or yarn
 - Git
+- Anvil API credentials
 
 ### Installation
 
@@ -54,7 +55,7 @@ An AI-powered blog generation platform that transforms your interests into profe
    Edit `.env.local` with your actual values:
 
    ```env
-   # Anvil API Configuration (if using the full blog generation)
+   # Anvil API Configuration (REQUIRED for full functionality)
    ANVIL_USERNAME=your_anvil_username
    ANVIL_PASSWORD=your_anvil_password
    ANVIL_API_URL=https://your-anvil-app.anvil.app
@@ -76,38 +77,77 @@ An AI-powered blog generation platform that transforms your interests into profe
 
 ## 📦 Deployment
 
-### GitHub Pages (Automatic)
+### Vercel (Recommended - Full Functionality)
 
-This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+Vercel provides the best experience for Next.js apps with full API route support.
 
-1. **Push to main branch**
+#### Option 1: Deploy from GitHub (Automatic)
+
+1. **Push your code to GitHub**
 
    ```bash
    git add .
-   git commit -m "Initial commit"
+   git commit -m "Deploy to Vercel"
    git push origin main
    ```
 
-2. **Enable GitHub Pages**
+2. **Connect to Vercel**
 
-   - Go to your repository settings
-   - Navigate to "Pages" section
-   - Set source to "GitHub Actions"
+   - Go to [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import your GitHub repository
+   - Vercel will auto-detect Next.js settings
 
-3. **Your site will be available at:**
-   `https://yourusername.github.io/ventpointone`
+3. **Add Environment Variables**
+   In your Vercel project dashboard:
 
-### Manual Deployment
+   - Go to **Settings** → **Environment Variables**
+   - Add these variables:
+     ```
+     ANVIL_USERNAME = your_anvil_username
+     ANVIL_PASSWORD = your_anvil_password
+     ANVIL_API_URL = https://your-anvil-app.anvil.app
+     ```
+
+4. **Deploy**
+   - Click "Deploy"
+   - Your app will be live at `https://your-project.vercel.app`
+
+#### Option 2: Deploy with Vercel CLI
 
 ```bash
-# Build for production
-npm run build
+# Install Vercel CLI
+npm install -g vercel
 
-# Export static files
-npm run export
+# Deploy
+vercel
 
-# The `out` folder contains your static site
+# Add environment variables
+vercel env add ANVIL_USERNAME production
+vercel env add ANVIL_PASSWORD production
+vercel env add ANVIL_API_URL production
+
+# Redeploy with environment variables
+vercel --prod
 ```
+
+### Alternative: Netlify
+
+1. **Build the project**
+
+   ```bash
+   npm run build
+   ```
+
+2. **Deploy to Netlify**
+   - Connect your GitHub repository
+   - Set build command: `npm run build`
+   - Set publish directory: `.next`
+   - Add environment variables in Netlify dashboard
+
+### ⚠️ GitHub Pages Limitation
+
+**Note**: GitHub Pages only supports static websites and cannot run the AI blog generation features. For full functionality, use Vercel or Netlify.
 
 ## 🔧 Configuration
 
@@ -115,36 +155,23 @@ npm run export
 
 | Variable              | Description            | Required |
 | --------------------- | ---------------------- | -------- |
-| `ANVIL_USERNAME`      | Username for Anvil API | No\*     |
-| `ANVIL_PASSWORD`      | Password for Anvil API | No\*     |
-| `ANVIL_API_URL`       | Base URL for Anvil API | No\*     |
+| `ANVIL_USERNAME`      | Username for Anvil API | **Yes**  |
+| `ANVIL_PASSWORD`      | Password for Anvil API | **Yes**  |
+| `ANVIL_API_URL`       | Base URL for Anvil API | **Yes**  |
 | `NEXT_PUBLIC_APP_URL` | Public URL of your app | No       |
 
-\*Required only if using the full AI blog generation features
+### Getting Anvil Credentials
 
-### GitHub Pages Configuration
-
-The app is pre-configured for GitHub Pages with:
-
-- Static export enabled
-- Proper asset paths
-- GitHub Actions workflow
-- `.nojekyll` file for proper routing
+1. Sign up at [anvil.works](https://anvil.works)
+2. Create your blog generation app
+3. Get your API credentials from the app settings
+4. Update your environment variables
 
 ## 🎨 Customization
 
 ### Updating Repository Name
 
-If you change your repository name, update:
-
-1. **next.config.ts**
-
-   ```typescript
-   basePath: process.env.NODE_ENV === "production" ? "/your-new-repo-name" : "",
-   assetPrefix: process.env.NODE_ENV === "production" ? "/your-new-repo-name/" : "",
-   ```
-
-2. **Rebuild and redeploy**
+If you change your repository name, update the import URLs in your Vercel/Netlify deployment settings.
 
 ### Styling
 
@@ -156,16 +183,17 @@ If you change your repository name, update:
 
 ```
 ventpointone/
-├── .github/workflows/    # GitHub Actions
+├── .github/workflows/    # GitHub Actions (legacy)
 ├── public/              # Static assets
 ├── src/
 │   ├── app/            # Next.js App Router
-│   │   ├── api/        # API routes
+│   │   ├── api/        # API routes (working!)
 │   │   ├── demo/       # Demo page
 │   │   └── globals.css # Global styles
 │   └── components/     # React components
 ├── .env.example        # Environment variables template
 ├── .gitignore         # Git ignore rules
+├── vercel.json        # Vercel configuration
 └── next.config.ts     # Next.js configuration
 ```
 
@@ -178,7 +206,6 @@ npm run dev          # Start development server
 npm run build        # Build for production
 npm run start        # Start production server
 npm run lint         # Run ESLint
-npm run export       # Build and export static files
 ```
 
 ### Code Style
@@ -193,6 +220,7 @@ npm run export       # Build and export static files
 - API routes validate environment variables
 - `.gitignore` excludes sensitive files
 - CORS protection on API endpoints
+- Server-side API calls prevent credential exposure
 
 ## 🤝 Contributing
 
@@ -216,7 +244,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Built with [Next.js](https://nextjs.org/)
 - Styled with [Tailwind CSS](https://tailwindcss.com/)
-- Deployed on [GitHub Pages](https://pages.github.com/)
+- Deployed on [Vercel](https://vercel.com/)
 - AI integration powered by Anvil
 
 ---

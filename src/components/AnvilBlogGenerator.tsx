@@ -28,12 +28,24 @@ export default function AnvilBlogGenerator() {
     try {
       console.log(`🚀 Fetching blog results for ID: ${id} via API route`);
 
-      // Note: API routes are disabled for static GitHub Pages deployment
-      // For the demo version, we'll show a message instead
-      console.log("API routes are not available in static deployment");
-      throw new Error(
-        "API functionality is not available in the static demo version. This would work in a full deployment with server support."
-      );
+      // Use our Next.js API route to avoid CORS issues
+      const response = await fetch(`/api/blog-results?id=${id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(
+          errorData.error || `HTTP error! status: ${response.status}`
+        );
+      }
+
+      const result = await response.json();
+      setBlogResult(result);
+      console.log("✅ Blog result fetched successfully:", result);
     } catch (err) {
       const errorMessage =
         err instanceof Error ? err.message : "Unknown error occurred";
