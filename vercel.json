@@ -3,10 +3,5 @@
     "src/app/api/**/*.ts": {
       "maxDuration": 30
     }
-  },
-  "env": {
-    "ANVIL_USERNAME": "@anvil_username",
-    "ANVIL_PASSWORD": "@anvil_password",
-    "ANVIL_API_URL": "@anvil_api_url"
   }
 }
