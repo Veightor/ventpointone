@@ -532,13 +532,6 @@ export default function DemoPage() {
       {/* Main Demo Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          {/* Recent Posts Section */}
-          <div className="mb-16">
-            <RecentPostsSelector
-              onPostSelect={handleRecentPostSelect}
-              selectedPostId={promptId}
-            />
-          </div>
           {/* Interest to Blog Transformation */}
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Input Side */}
