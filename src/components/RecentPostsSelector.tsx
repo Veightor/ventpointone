@@ -200,18 +200,18 @@ export default function RecentPostsSelector({
   }
 
   return (
-    <div className="bg-gradient-to-br from-[#5A3D48]/20 to-[#9A4453]/10 backdrop-blur-lg rounded-3xl p-8 border border-[#805C6F]/30 hover:border-[#C5768A]/50 transition-all duration-500">
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-2xl font-bold text-[#EAEAEA] flex items-center">
-          <ClockIcon className="w-6 h-6 mr-3 text-[#C5768A]" />
+    <div className="bg-gradient-to-br from-[#5A3D48]/15 to-[#9A4453]/8 backdrop-blur-lg rounded-2xl p-6 border border-[#805C6F]/20 hover:border-[#C5768A]/30 transition-all duration-300">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-bold text-[#EAEAEA] flex items-center">
+          <ClockIcon className="w-5 h-5 mr-2 text-[#C5768A]" />
           Recent Posts
         </h3>
         <button
           onClick={fetchRecentPosts}
           disabled={isLoading}
-          className="px-4 py-2 bg-[#805C6F]/20 hover:bg-[#805C6F]/30 rounded-lg text-sm text-[#D4B5C8] border border-[#805C6F]/40 hover:border-[#C5768A]/50 transition-all duration-300 disabled:opacity-50"
+          className="px-3 py-1 bg-[#805C6F]/15 hover:bg-[#805C6F]/25 rounded-md text-xs text-[#D4B5C8] border border-[#805C6F]/30 hover:border-[#C5768A]/40 transition-all duration-300 disabled:opacity-50"
         >
-          {isLoading ? "Loading..." : "Refresh"}
+          {isLoading ? "..." : "↻"}
         </button>
       </div>
 
@@ -227,21 +227,21 @@ export default function RecentPostsSelector({
           ))}
         </div>
       ) : (
-        <div className="space-y-3">
-          {recentPosts.map((post) => (
+        <div className="space-y-2">
+          {recentPosts.slice(0, 3).map((post) => (
             <button
               key={post.id}
               onClick={() => onPostSelect(post.id)}
-              className={`w-full text-left p-4 rounded-xl transition-all duration-300 border hover:scale-[1.02] group ${
+              className={`w-full text-left p-3 rounded-lg transition-all duration-200 border group ${
                 selectedPostId === post.id
-                  ? "bg-gradient-to-r from-[#9A4453]/30 to-[#C5768A]/20 border-[#C5768A]/50"
-                  : "bg-[#2A2A2A]/60 hover:bg-[#2A2A2A]/80 border-[#805C6F]/30 hover:border-[#C5768A]/40"
+                  ? "bg-gradient-to-r from-[#9A4453]/25 to-[#C5768A]/15 border-[#C5768A]/40"
+                  : "bg-[#2A2A2A]/40 hover:bg-[#2A2A2A]/60 border-[#805C6F]/20 hover:border-[#C5768A]/30"
               }`}
             >
-              <div className="flex items-start justify-between">
-                <div className="flex-1 min-w-0 mr-3">
+              <div className="flex items-center justify-between">
+                <div className="flex-1 min-w-0 mr-2">
                   <h4
-                    className={`font-semibold text-sm leading-tight mb-1 transition-colors ${
+                    className={`font-medium text-xs leading-tight mb-1 transition-colors line-clamp-2 ${
                       selectedPostId === post.id
                         ? "text-[#EAEAEA]"
                         : "text-[#D4B5C8] group-hover:text-[#EAEAEA]"
@@ -249,25 +249,18 @@ export default function RecentPostsSelector({
                   >
                     {post.title}
                   </h4>
-                  {post.snippet && (
-                    <p className="text-xs text-[#805C6F] line-clamp-2 mb-2">
-                      {post.snippet}
-                    </p>
-                  )}
                   <div className="flex items-center text-xs text-[#805C6F]">
-                    <span>{formatRelativeTime(post.created_at)}</span>
-                    <span className="mx-2">•</span>
                     <span>ID: {post.id}</span>
                   </div>
                 </div>
                 <div
-                  className={`transition-all duration-300 ${
+                  className={`transition-all duration-200 flex-shrink-0 ${
                     selectedPostId === post.id
                       ? "text-[#C5768A]"
                       : "text-[#805C6F] group-hover:text-[#C5768A]"
                   }`}
                 >
-                  <SparklesIcon className="w-4 h-4" />
+                  <SparklesIcon className="w-3 h-3" />
                 </div>
               </div>
             </button>
@@ -275,17 +268,9 @@ export default function RecentPostsSelector({
         </div>
       )}
 
-      {error && recentPosts.length > 0 && (
-        <div className="mt-4 p-3 bg-[#9A4453]/20 border border-[#9A4453]/40 rounded-lg">
-          <p className="text-xs text-[#C5768A]">
-            ⚠️ Some recent posts may not be current. Click refresh to try again.
-          </p>
-        </div>
-      )}
-
-      <div className="mt-6 pt-4 border-t border-[#805C6F]/30">
+      <div className="mt-3 pt-3 border-t border-[#805C6F]/20">
         <p className="text-xs text-[#805C6F] text-center">
-          Click any post above to load its content in the demo
+          Click any post to load it above
         </p>
       </div>
     </div>

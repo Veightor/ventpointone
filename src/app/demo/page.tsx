@@ -1111,6 +1111,14 @@ export default function DemoPage() {
             </div>
           )}
 
+          {/* Recent Posts Section - Moved Below Demo */}
+          <div className="mt-16">
+            <RecentPostsSelector
+              onPostSelect={handleRecentPostSelect}
+              selectedPostId={promptId}
+            />
+          </div>
+
           {/* How It Works */}
           <div className="bg-gradient-to-r from-[#5A3D48]/20 to-[#9A4453]/10 backdrop-blur-lg rounded-2xl p-8 border border-[#805C6F]/30 mt-16">
             <h3 className="text-2xl font-bold text-[#EAEAEA] mb-6 text-center">

@@ -36,8 +36,8 @@ export async function GET(
 
     const credentials = btoa(`${username}:${password}`);
 
-    // Make the request to Anvil API
-    const response = await fetch(`${apiUrl}/results/list_ids/${amount}`, {
+    // First, get the current highest ID by requesting 1 item
+    const currentResponse = await fetch(`${apiUrl}/results/list_ids/1`, {
       method: "GET",
       headers: {
         Authorization: `Basic ${credentials}`,
@@ -45,50 +45,99 @@ export async function GET(
       },
     });
 
-    if (!response.ok) {
-      console.error(
-        `Anvil API error: ${response.status} ${response.statusText}`
-      );
+    if (!currentResponse.ok) {
+      console.error(`Failed to get current ID: ${currentResponse.status}`);
       return NextResponse.json(
-        {
-          error: `Failed to fetch blog list: ${response.status} ${response.statusText}`,
-          amount: amount,
-        },
-        { status: response.status }
+        { error: `Failed to get current ID: ${currentResponse.status}` },
+        { status: currentResponse.status }
       );
     }
 
-    // Check content type and handle accordingly
-    const contentType = response.headers.get("content-type") || "";
-    let data;
+    const currentData = await currentResponse.json();
+    console.log("📊 Current ID response:", currentData);
 
-    console.log(`📦 Response content-type: ${contentType}`);
-
-    if (contentType.includes("application/json")) {
-      data = await response.json();
+    // Extract current ID (should be the first/highest number in the array)
+    let currentId: number;
+    if (Array.isArray(currentData) && currentData.length > 0) {
+      currentId = parseInt(currentData[0]);
     } else {
-      // Handle non-JSON response
-      const textResponse = await response.text();
-      console.log(
-        `📝 Raw response preview: ${textResponse.substring(0, 200)}...`
+      console.error(
+        "Unable to determine current ID from response:",
+        currentData
       );
+      return NextResponse.json(
+        { error: "Unable to determine current ID" },
+        { status: 500 }
+      );
+    }
 
-      try {
-        data = JSON.parse(textResponse);
-        console.log("✅ Successfully parsed text response as JSON");
-      } catch (parseError) {
-        console.log("⚠️ Response is not JSON, treating as raw text");
-        data = { rawContent: textResponse };
+    console.log(`📊 Current ID determined: ${currentId}`);
+
+    // Calculate the IDs we want (current ID minus 1 through 5)
+    const targetIds = [];
+    for (let i = 1; i <= amount; i++) {
+      targetIds.push(currentId - i);
+    }
+
+    console.log(`📋 Target IDs: ${targetIds.join(", ")}`);
+
+    // Now fetch individual posts for each target ID
+    const posts = [];
+    for (const id of targetIds) {
+      if (id > 0) {
+        // Only fetch positive IDs
+        try {
+          const postResponse = await fetch(`${apiUrl}/results/get/${id}`, {
+            method: "GET",
+            headers: {
+              Authorization: `Basic ${credentials}`,
+              "Content-Type": "application/json",
+            },
+          });
+
+          if (postResponse.ok) {
+            const postData = await postResponse.json();
+            console.log(
+              `✅ Fetched post ${id}:`,
+              postData.data?.[0]?.title || "No title"
+            );
+
+            // Extract the blog data
+            if (
+              postData.data &&
+              Array.isArray(postData.data) &&
+              postData.data.length > 0
+            ) {
+              const blogData = postData.data[0];
+              posts.push({
+                id: id.toString(),
+                title: blogData.title || `Blog Post ${id}`,
+                subtitle: blogData.subtitle || "",
+                created_at: new Date().toISOString(), // We don't have real timestamps
+                snippet:
+                  blogData.subtitle ||
+                  blogData.paragraphs?.[0]?.content?.substring(0, 150) ||
+                  "",
+              });
+            }
+          } else {
+            console.log(
+              `⚠️ Failed to fetch post ${id}: ${postResponse.status}`
+            );
+          }
+        } catch (error) {
+          console.error(`❌ Error fetching post ${id}:`, error);
+        }
       }
     }
 
-    // Log success for debugging
-    console.log(`✅ Successfully fetched last ${amount} blog posts`);
+    console.log(`📋 Successfully collected ${posts.length} posts`);
 
     return NextResponse.json({
       success: true,
       amount: amount,
-      data,
+      currentId: currentId,
+      data: posts,
     });
   } catch (error) {
     console.error("Error fetching blog list:", error);
