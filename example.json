@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Why Purple Potatoes Are the Colorful Superfood You Need Right Now",
+    "subtitle": "These vibrant spuds aren't just eye-catching — they're packed with nutrients, Instagram-worthy, and totally on trend.",
+    "paragraphs": [
+      {
+        "id": 1,
+        "content": "Move over, sweet potatoes — purple potatoes are stealing the spotlight. With their vibrant hue and rich, earthy flavor, these naturally purple gems are becoming a staple in health-focused and foodie kitchens alike. Native to Peru and Bolivia, purple potatoes have long been used in South American cuisine, but they're making a major comeback thanks to their stunning color and impressive health benefits.",
+        "image_prompt": "A colorful spread of various types of purple potatoes — some raw, some cooked — on a rustic wooden board with kitchen ingredients surrounding them"
+      },
+      {
+        "id": 2,
+        "content": "So, what makes purple potatoes so special? They're loaded with antioxidants, especially anthocyanins — the same powerhouse compounds found in blueberries and red cabbage. These antioxidants help fight inflammation, boost heart health, and may even improve brain function. Basically, they're not just pretty — they're powerful.",
+        "image_prompt": "A close-up of sliced purple potatoes highlighting their vivid interior color, overlaid with icons representing heart and brain health"
+      },
+      {
+        "id": 3,
+        "content": "Let's talk versatility. Purple potatoes are perfect for roasting, mashing, or tossing into a salad for that \"wow\" factor. Try them in place of regular potatoes for a colorful twist — like purple mashed potatoes at Thanksgiving (hello, conversation starter). They also hold their color impressively well during cooking, making them ideal for both everyday meals and extra-aesthetic food content.",
+        "image_prompt": "A beautifully arranged dish of purple potato mash garnished with herbs, styled on a modern dinner plate with sleek tableware"
+      },
+      {
+        "id": 4,
+        "content": "Of course, Gen Z and millennials are all about aesthetics — and purple potatoes deliver. Their vibrant palette makes them a total hit on social media, especially when paired with trending design dishes like buddha bowls or rainbow meals. If your plate isn't Instagrammable, did you even eat it?",
+        "image_prompt": "A flat lay of a vibrant buddha bowl with purple potatoes, kale, quinoa, and colorful veggies on a pastel background with a smartphone capturing the shot"
+      },
+      {
+        "id": 5,
+        "content": "Buying them isn't hard, either. Many grocery stores and farmers markets carry a few varieties like Purple Majesty or Okinawan sweet potatoes. If you've got a green thumb, you can even grow your own — they're surprisingly hardy and add a pop of color to your garden. Just imagine digging up your own batch of vibrant tubers (TikTok-worthy, for sure).",
+        "image_prompt": "A small backyard garden with someone harvesting purple potatoes from the soil, with earthy hands and a basket half full of multicolored spuds"
+      }
+    ],
+    "title_image_prompt": "An artistic overhead shot of a rustic kitchen counter featuring a mix of cooked and raw purple potatoes, colorful herbs, and organic ingredients, with soft natural lighting and modern plating — conveying a trendy farm-to-table vibe"
+  },
+  {
+    "title_image": "An artistic overhead shot of a rustic kitchen counter featuring a mix of cooked and raw purple potatoes, colorful herbs, and organic ingredients, with soft natural lighting and modern plating — conveying a trendy farm-to-table vibe"
+  },
+  {
+    "id": 3,
+    "data": "",
+    "content": "Let's talk versatility. Purple potatoes are perfect for roasting, mashing, or tossing into a salad for that \"wow\" factor. Try them in place of regular potatoes for a colorful twist — like purple mashed potatoes at Thanksgiving (hello, conversation starter). They also hold their color impressively well during cooking, making them ideal for both everyday meals and extra-aesthetic food content.",
+    "isSelected": true,
+    "image_prompt": "A beautifully arranged dish of purple potato mash garnished with herbs, styled on a modern dinner plate with sleek tableware",
+    "originalIndex": 2
+  },
+  {
+    "id": 4,
+    "data": "",
+    "content": "Of course, Gen Z and millennials are all about aesthetics — and purple potatoes deliver. Their vibrant palette makes them a total hit on social media, especially when paired with trending design dishes like buddha bowls or rainbow meals. If your plate isn't Instagrammable, did you even eat it?",
+    "isSelected": true,
+    "image_prompt": "A flat lay of a vibrant buddha bowl with purple potatoes, kale, quinoa, and colorful veggies on a pastel background with a smartphone capturing the shot",
+    "originalIndex": 3
+  }
+]

@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+:root {
+  /* Dusky Bloom Ritual Theme */
+  --deep-charcoal: #2a2a2a;
+  --dusty-mauve: #805c6f;
+  --muted-burgundy: #9a4453;
+  --frosted-lilac: #d4b5c8;
+  --soft-rose: #c5768a;
+  --shadowed-plum: #5a3d48;
+  --desaturated-white: #eaeaea;
+}
