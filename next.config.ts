@@ -11,12 +11,6 @@ const nextConfig: NextConfig = {
   // Disable server-side features for static export
   trailingSlash: true,
 
-  // Experimental features for better compatibility
-  experimental: {
-    // Enable newer CSS features
-    cssChunking: "strict",
-  },
-
   // Ensure proper TypeScript compilation
   typescript: {
     // Don't fail build on TypeScript errors during development
