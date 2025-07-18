@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AutomatedBlogShowcase from "../components/AutomatedBlogShowcase";
+import HomeRecentPosts from "../components/HomeRecentPosts";
 
 export default function Home() {
   return (
@@ -538,6 +539,9 @@ export default function Home() {
       {/* AI Blogging Assistant Demo */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <AutomatedBlogShowcase />
+
+        {/* Recent Posts Showcase */}
+        <HomeRecentPosts />
       </section>
 
       {/* Border Separator */}

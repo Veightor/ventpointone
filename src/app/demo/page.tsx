@@ -164,6 +164,19 @@ export default function DemoPage() {
     setRandomInterests(getRandomInterests());
   };
 
+  // Check URL parameters for auto-loading a post
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const loadPostId = urlParams.get("loadPost");
+    if (loadPostId) {
+      console.log(`🎯 Auto-loading post from URL: ${loadPostId}`);
+      setPromptId(loadPostId);
+      fetchBlogResult(loadPostId);
+      // Clean up URL
+      window.history.replaceState({}, "", "/demo");
+    }
+  }, []);
+
   // Function to handle post selection from recent posts
   const handleRecentPostSelect = useCallback((postId: string) => {
     console.log(`🎯 Selected recent post ID: ${postId}`);
