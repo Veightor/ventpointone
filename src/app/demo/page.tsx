@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback, useRef } from "react";
 import Image from "next/image";
+import RecentPostsSelector from "../../components/RecentPostsSelector";
 
 // 100 diverse interests for the demo
 const INTERESTS = [
@@ -162,6 +163,13 @@ export default function DemoPage() {
   const refreshInterests = () => {
     setRandomInterests(getRandomInterests());
   };
+
+  // Function to handle post selection from recent posts
+  const handleRecentPostSelect = useCallback((postId: string) => {
+    console.log(`🎯 Selected recent post ID: ${postId}`);
+    setPromptId(postId);
+    fetchBlogResult(postId);
+  }, []);
 
   const fetchBlogResult = useCallback(
     async (id: string, isPolling = false) => {
@@ -511,6 +519,13 @@ export default function DemoPage() {
       {/* Main Demo Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+          {/* Recent Posts Section */}
+          <div className="mb-16">
+            <RecentPostsSelector
+              onPostSelect={handleRecentPostSelect}
+              selectedPostId={promptId}
+            />
+          </div>
           {/* Interest to Blog Transformation */}
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Input Side */}
