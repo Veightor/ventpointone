@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ArtOrchestrator from "../components/ArtOrchestrator";
+import InteractiveArtLayer from "../components/InteractiveArtLayer";
+import ArtExplainer from "../components/ArtExplainer";
+import PerformanceMonitor from "../components/PerformanceMonitor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ArtOrchestrator />
+        <InteractiveArtLayer />
+        {children}
+        <ArtExplainer />
+        <PerformanceMonitor />
+      </body>
     </html>
   );
 }
