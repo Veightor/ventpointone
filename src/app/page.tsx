@@ -36,109 +36,161 @@ export default function Home() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center z-10">
-          {/* Status Badge with Animation */}
+          {/* Status Badge with Clean Design */}
           <div className="mb-8 flex justify-center">
-            <div className="group relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#9A4453] via-[#C5768A] to-[#D4B5C8] rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-              <span className="relative inline-flex items-center px-6 py-3 rounded-full text-sm font-bold bg-[#2A2A2A] border border-[#D4B5C8]/30 text-[#D4B5C8] transition-all duration-300 hover:border-[#C5768A]/50 hover:text-[#C5768A]">
-                <span className="w-2 h-2 bg-[#C5768A] rounded-full mr-3 animate-ping"></span>
-                A KorBon.AI Product — Phase 0.5 Beta
-              </span>
-            </div>
+            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/10 border border-white/20 text-gray-300 backdrop-blur-sm transition-all duration-300 hover:bg-white/15 hover:border-white/30 hover:text-white">
+              <span className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></span>
+              A KorBon.AI Product — Phase 0.5 Beta
+            </span>
           </div>
 
-          {/* Main Title with Advanced Effects */}
-          <div className="mb-8 relative">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-4 tracking-tight">
-              <span className="relative inline-block">
-                <span className="absolute inset-0 bg-gradient-to-r from-[#D4B5C8] via-[#C5768A] to-[#9A4453] bg-clip-text text-transparent blur-sm opacity-50"></span>
-                <span className="relative bg-gradient-to-r from-[#D4B5C8] via-[#C5768A] to-[#9A4453] bg-clip-text text-transparent animate-pulse">
-                  KorBIN
-                </span>
+          {/* Main Title with Clean Design */}
+          <div className="mb-12 relative">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight">
+              <span className="bg-gradient-to-r from-white via-gray-100 to-gray-200 bg-clip-text text-transparent">
+                KorBIN
               </span>
-              <span className="block bg-gradient-to-r from-[#9A4453] via-[#805C6F] to-[#5A3D48] bg-clip-text text-transparent">
+              <span className="block text-4xl md:text-5xl lg:text-6xl font-light text-gray-400 mt-2">
                 view
               </span>
             </h1>
 
-            {/* Subtitle with Typing Effect */}
-            <div className="text-xl md:text-3xl text-[#805C6F] font-light mb-8 max-w-4xl mx-auto leading-relaxed">
-              <span className="relative">
-                Transform your
-                <span className="relative mx-2">
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#C5768A] to-[#D4B5C8] bg-clip-text text-transparent">
-                    interests
-                  </span>
-                  <span className="bg-gradient-to-r from-[#C5768A] to-[#D4B5C8] bg-clip-text text-transparent">
-                    interests
-                  </span>
-                </span>
-                into professional blogs using advanced AI that writes, designs,
-                and publishes
-                <span className="relative mx-2">
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#9A4453] to-[#C5768A] bg-clip-text text-transparent">
-                    automatically
-                  </span>
-                  <span className="bg-gradient-to-r from-[#9A4453] to-[#C5768A] bg-clip-text text-transparent">
-                    automatically
-                  </span>
-                </span>
-              </span>
+            {/* Clean Subtitle */}
+            <div className="text-lg md:text-xl text-gray-300 font-normal mb-8 max-w-3xl mx-auto leading-relaxed">
+              Transform your interests into professional blogs using advanced AI
+              that writes, designs, and publishes automatically
             </div>
           </div>
 
-          {/* CTA Buttons with Enhanced Effects */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <div className="group relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#9A4453] via-[#C5768A] to-[#D4B5C8] rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-              <a href="/demo" className="relative block">
-                <button className="relative px-10 py-4 bg-gradient-to-r from-[#9A4453] to-[#C5768A] hover:from-[#9A4453] hover:to-[#D4B5C8] rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-[#9A4453]/25 text-[#EAEAEA]">
-                  🎭 Try Ventriloquist Now
-                  <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">
-                    →
-                  </span>
-                </button>
-              </a>
-            </div>
+          {/* Apple TV Style Menu Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16 max-w-6xl mx-auto">
+            {/* Primary Action - Try Ventriloquist */}
+            <a href="/demo" className="group relative block lg:col-span-2">
+              <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-6 border border-white/10 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-gray-700/80 hover:to-gray-800/80 hover:border-white/20 hover:shadow-3xl">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-4xl">🎭</div>
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <svg
+                      className="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Try Ventriloquist Now
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  Get started with AI-powered blog generation in seconds
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </a>
 
-            <div className="group relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#5A3D48] via-[#805C6F] to-[#C5768A] rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-              <a href="/prompt-lab" className="relative block">
-                <button className="relative px-10 py-4 bg-gradient-to-r from-[#5A3D48] to-[#805C6F] hover:from-[#805C6F] hover:to-[#C5768A] rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-[#5A3D48]/25 text-[#EAEAEA] border border-[#805C6F]/30">
-                  🧪 Experimental Prompt Lab
-                  <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">
-                    →
-                  </span>
-                </button>
-              </a>
-            </div>
+            {/* Experimental Prompt Lab */}
+            <a href="/prompt-lab" className="group relative block">
+              <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-6 border border-white/10 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-gray-700/80 hover:to-gray-800/80 hover:border-white/20 hover:shadow-3xl">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-3xl">🧪</div>
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Experimental Prompt Lab
+                </h3>
+                <p className="text-xs text-gray-400 leading-relaxed">
+                  Unique AI input interfaces
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </a>
 
-            <div className="group relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-              <a href="/emotion-alchemy" className="relative block">
-                <button className="relative px-10 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-purple-600 hover:to-pink-600 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-indigo-600/25 text-[#EAEAEA] border border-purple-600/30">
-                  ⚗️ Emotion Alchemy Lab
-                  <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">
-                    →
-                  </span>
-                </button>
-              </a>
-            </div>
+            {/* Emotion Alchemy Lab */}
+            <a href="/emotion-alchemy" className="group relative block">
+              <div className="relative bg-gradient-to-br from-indigo-800/80 to-purple-900/80 backdrop-blur-xl rounded-2xl p-6 border border-indigo-500/20 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-indigo-700/80 hover:to-purple-800/80 hover:border-indigo-400/30 hover:shadow-3xl">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-3xl">⚗️</div>
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Emotion Alchemy Lab
+                </h3>
+                <p className="text-xs text-gray-300 leading-relaxed">
+                  Create unique content moods
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </a>
 
-            <div className="group relative">
-              <a href="/demo" className="relative block">
-                <button className="relative px-10 py-4 border-2 border-[#805C6F] hover:border-[#C5768A] rounded-xl font-bold text-lg transition-all duration-300 hover:bg-[#805C6F]/10 text-[#805C6F] hover:text-[#C5768A] backdrop-blur-sm">
+            {/* Live Demo */}
+            <a href="/demo" className="group relative block lg:col-span-2">
+              <div className="relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-xl rounded-2xl p-6 border border-white/[0.08] shadow-xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-gray-700/60 hover:to-gray-800/60 hover:border-white/15 hover:shadow-2xl">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-3xl">▶️</div>
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <svg
+                      className="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
                   Live Demo
-                  <span className="ml-2 inline-block transition-transform group-hover:scale-110">
-                    ▶
-                  </span>
-                </button>
-              </a>
-            </div>
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  Watch KorBIN in action with real-time generation
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-500/5 to-gray-400/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </a>
           </div>
 
           {/* Feature Pills */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-3 mb-16">
             {[
               "🤖 AI-Powered Generation",
               "⚡ 47s Average Speed",
@@ -146,9 +198,8 @@ export default function Home() {
               "🎯 12+ Content Types",
               "🔒 Enterprise Ready",
             ].map((feature, index) => (
-              <div key={index} className="group relative">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#805C6F] to-[#D4B5C8] rounded-full opacity-30 group-hover:opacity-50 transition duration-300 blur"></div>
-                <span className="relative inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-[#2A2A2A]/80 border border-[#805C6F]/30 text-[#D4B5C8] backdrop-blur-sm hover:border-[#C5768A]/50 transition-all duration-300">
+              <div key={index} className="group">
+                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/5 border border-white/10 text-gray-300 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 hover:text-white transition-all duration-300">
                   {feature}
                 </span>
               </div>
@@ -157,8 +208,8 @@ export default function Home() {
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-[#805C6F] rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-[#C5768A] rounded-full mt-2 animate-pulse"></div>
+            <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white/40 rounded-full mt-2 animate-pulse"></div>
             </div>
           </div>
         </div>
