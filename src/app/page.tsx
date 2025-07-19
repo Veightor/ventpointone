@@ -665,190 +665,273 @@ export default function Home() {
             </p>
 
             {/* Enhanced Bento Grid with Images */}
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[250px]">
-              {/* Featured Tech Blog with Image */}
-              <div className="md:col-span-2 md:row-span-2 group relative overflow-hidden bg-gradient-to-br from-[#5A3D48]/30 to-[#9A4453]/20 backdrop-blur-lg rounded-3xl border border-[#805C6F]/30 hover:border-[#C5768A]/60 transition-all duration-500 hover:scale-[1.02]">
-                <div className="absolute inset-0 overflow-hidden rounded-3xl">
-                  <Image
-                    src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg"
-                    alt="Sustainable Computing"
-                    fill
-                    className="object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-500"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A2A]/90 via-[#2A2A2A]/50 to-transparent"></div>
-                <div className="relative h-full p-8 flex flex-col justify-between">
-                  <div>
-                    <span className="inline-block px-4 py-2 bg-[#9A4453]/40 border border-[#C5768A]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-4 backdrop-blur-sm">
-                      💻 TECH STARTUP
-                    </span>
-                    <h4 className="text-2xl font-bold text-[#EAEAEA] mb-3 leading-tight">
-                      CloudVault Technologies: How We Scale Content Marketing
-                      with AI-Generated Technical Blogs
-                    </h4>
-                    <p className="text-[#D4B5C8] leading-relaxed">
-                      &ldquo;Ventriloquist helps us create 12+ technical
-                      articles per month about cloud infrastructure, DevOps, and
-                      emerging technologies. Our organic traffic increased 340%
-                      in 6 months...&rdquo;
-                    </p>
+            <div className="relative">
+              {/* Floating Success Metrics */}
+              <div className="absolute inset-0 pointer-events-none hidden lg:block">
+                {/* Floating Metric 1 */}
+                <div className="absolute top-16 right-12 animate-float">
+                  <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-xl rounded-2xl border border-cyan-400/30 p-4 shadow-xl">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-cyan-300">
+                        340%
+                      </div>
+                      <div className="text-xs text-cyan-200/80">
+                        Traffic Boost
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-gradient-to-r from-[#C5768A] to-[#D4B5C8] rounded-full"></div>
+                </div>
+
+                {/* Floating Metric 2 */}
+                <div className="absolute top-72 left-8 animate-float-delayed">
+                  <div className="bg-gradient-to-r from-emerald-500/20 to-green-500/20 backdrop-blur-xl rounded-2xl border border-emerald-400/30 p-4 shadow-xl">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-emerald-300">
+                        60%
+                      </div>
+                      <div className="text-xs text-emerald-200/80">
+                        Less Support
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating Testimonial Quote */}
+                <div className="absolute bottom-20 right-16 animate-pulse-soft">
+                  <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-xl border border-purple-400/30 p-3 max-w-xs shadow-xl">
+                    <div className="text-xs text-purple-200/90 italic">
+                      &ldquo;Game-changer for our content marketing&rdquo;
+                    </div>
+                    <div className="text-xs text-purple-300/70 mt-1">
+                      - Marketing Director
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating Company Icons */}
+                <div className="absolute top-32 left-1/4 animate-bounce-soft">
+                  <div className="flex space-x-2">
+                    <div className="w-8 h-8 bg-gradient-to-r from-orange-500/30 to-red-500/30 rounded-lg flex items-center justify-center backdrop-blur-sm border border-orange-400/20">
+                      <span className="text-orange-200 text-xs font-bold">
+                        CT
+                      </span>
+                    </div>
+                    <div className="w-8 h-8 bg-gradient-to-r from-blue-500/30 to-indigo-500/30 rounded-lg flex items-center justify-center backdrop-blur-sm border border-blue-400/20">
+                      <span className="text-blue-200 text-xs font-bold">
+                        AB
+                      </span>
+                    </div>
+                    <div className="w-8 h-8 bg-gradient-to-r from-green-500/30 to-teal-500/30 rounded-lg flex items-center justify-center backdrop-blur-sm border border-green-400/20">
+                      <span className="text-green-200 text-xs font-bold">
+                        GS
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Success Indicator Lines */}
+                <div className="absolute top-24 left-1/3 w-16 h-0.5 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent animate-pulse-soft"></div>
+                <div className="absolute top-80 right-1/3 w-20 h-0.5 bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent animate-pulse-soft delay-1000"></div>
+
+                {/* Floating Achievement Badge */}
+                <div className="absolute bottom-32 left-12 animate-float-slow">
+                  <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 backdrop-blur-xl rounded-full border border-yellow-400/30 p-3 shadow-xl">
+                    <div className="text-center">
+                      <div className="text-yellow-300 text-lg">⭐</div>
+                      <div className="text-xs text-yellow-200/80 whitespace-nowrap">
+                        Top Rated
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[250px] relative z-10">
+                {/* Featured Tech Blog with Image */}
+                <div className="md:col-span-2 md:row-span-2 group relative overflow-hidden bg-gradient-to-br from-[#5A3D48]/30 to-[#9A4453]/20 backdrop-blur-lg rounded-3xl border border-[#805C6F]/30 hover:border-[#C5768A]/60 transition-all duration-500 hover:scale-[1.02]">
+                  <div className="absolute inset-0 overflow-hidden rounded-3xl">
+                    <Image
+                      src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg"
+                      alt="Sustainable Computing"
+                      fill
+                      className="object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-500"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A2A]/90 via-[#2A2A2A]/50 to-transparent"></div>
+                  <div className="relative h-full p-8 flex flex-col justify-between">
+                    <div>
+                      <span className="inline-block px-4 py-2 bg-[#9A4453]/40 border border-[#C5768A]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-4 backdrop-blur-sm">
+                        💻 TECH STARTUP
+                      </span>
+                      <h4 className="text-2xl font-bold text-[#EAEAEA] mb-3 leading-tight">
+                        CloudVault Technologies: How We Scale Content Marketing
+                        with AI-Generated Technical Blogs
+                      </h4>
+                      <p className="text-[#D4B5C8] leading-relaxed">
+                        &ldquo;Ventriloquist helps us create 12+ technical
+                        articles per month about cloud infrastructure, DevOps,
+                        and emerging technologies. Our organic traffic increased
+                        340% in 6 months...&rdquo;
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-[#C5768A] to-[#D4B5C8] rounded-full"></div>
+                        <span className="text-sm text-[#D4B5C8] font-medium">
+                          AI Generated
+                        </span>
+                      </div>
+                      <span className="text-sm text-[#805C6F] font-medium">
+                        12 min read
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Coffee Culture Blog with Image */}
+                <div className="group relative overflow-hidden bg-gradient-to-br from-[#805C6F]/20 to-[#D4B5C8]/20 backdrop-blur-lg rounded-3xl border border-[#805C6F]/30 hover:border-[#C5768A]/60 transition-all duration-300 hover:scale-105">
+                  <div className="absolute inset-0 overflow-hidden rounded-3xl">
+                    <Image
+                      src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg"
+                      alt="Coffee Culture"
+                      fill
+                      className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A2A]/80 to-transparent"></div>
+                  <div className="relative h-full p-6 flex flex-col justify-between">
+                    <div>
+                      <span className="inline-block px-3 py-1 bg-[#805C6F]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-3 backdrop-blur-sm">
+                        ☕ COFFEE ROASTERY
+                      </span>
+                      <h4 className="text-lg font-bold text-[#EAEAEA] mb-2 leading-tight">
+                        Artisan Bean Co: Weekly Coffee Education Content
+                      </h4>
+                    </div>
+                    <div className="text-sm text-[#D4B5C8] font-medium">
+                      6 min read
+                    </div>
+                  </div>
+                </div>
+
+                {/* Urban Gardening with Image */}
+                <div className="group relative overflow-hidden bg-gradient-to-br from-[#9A4453]/20 to-[#C5768A]/20 backdrop-blur-lg rounded-3xl border border-[#9A4453]/30 hover:border-[#C5768A]/60 transition-all duration-300 hover:scale-105">
+                  <div className="absolute inset-0 overflow-hidden rounded-3xl">
+                    <Image
+                      src="https://images.pexels.com/photos/1454794/pexels-photo-1454794.jpeg"
+                      alt="Urban Gardening"
+                      fill
+                      className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A2A]/80 to-transparent"></div>
+                  <div className="relative h-full p-6 flex flex-col justify-between">
+                    <div>
+                      <span className="inline-block px-3 py-1 bg-[#9A4453]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-3 backdrop-blur-sm">
+                        🌱 LANDSCAPING FIRM
+                      </span>
+                      <h4 className="text-lg font-bold text-[#EAEAEA] mb-2 leading-tight">
+                        GreenSpace Solutions: Seasonal Garden Tips Blog
+                      </h4>
+                    </div>
+                    <div className="text-sm text-[#D4B5C8] font-medium">
+                      4 min read
+                    </div>
+                  </div>
+                </div>
+
+                {/* How-to Guide with Image */}
+                <div className="md:col-span-2 group relative overflow-hidden bg-gradient-to-br from-[#C5768A]/20 to-[#D4B5C8]/20 backdrop-blur-lg rounded-3xl border border-[#C5768A]/30 hover:border-[#D4B5C8]/60 transition-all duration-300 hover:scale-[1.02]">
+                  <div className="absolute inset-0 overflow-hidden rounded-3xl">
+                    <Image
+                      src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg"
+                      alt="Smart Home Guide"
+                      fill
+                      className="object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-300"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#2A2A2A]/80 to-[#2A2A2A]/60"></div>
+                  <div className="relative h-full p-6 flex flex-col justify-between">
+                    <div>
+                      <span className="inline-block px-4 py-2 bg-[#C5768A]/40 border border-[#D4B5C8]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-4 backdrop-blur-sm">
+                        🏠 HOME AUTOMATION
+                      </span>
+                      <h4 className="text-xl font-bold text-[#EAEAEA] mb-3 leading-tight">
+                        SmartTech Innovations: DIY Smart Home Installation
+                        Guides
+                      </h4>
+                      <p className="text-[#D4B5C8] text-sm leading-relaxed">
+                        &ldquo;We use Ventriloquist to create detailed
+                        installation guides for our smart home products.
+                        Customer support tickets dropped 60% since launching our
+                        knowledge base...&rdquo;
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex space-x-2">
+                        <span className="px-3 py-1 bg-[#9A4453]/30 rounded-full text-xs text-[#C5768A] font-medium">
+                          #DIY
+                        </span>
+                        <span className="px-3 py-1 bg-[#805C6F]/30 rounded-full text-xs text-[#D4B5C8] font-medium">
+                          #SmartHome
+                        </span>
+                      </div>
                       <span className="text-sm text-[#D4B5C8] font-medium">
-                        AI Generated
+                        15 min read
                       </span>
                     </div>
-                    <span className="text-sm text-[#805C6F] font-medium">
-                      12 min read
-                    </span>
                   </div>
                 </div>
-              </div>
 
-              {/* Coffee Culture Blog with Image */}
-              <div className="group relative overflow-hidden bg-gradient-to-br from-[#805C6F]/20 to-[#D4B5C8]/20 backdrop-blur-lg rounded-3xl border border-[#805C6F]/30 hover:border-[#C5768A]/60 transition-all duration-300 hover:scale-105">
-                <div className="absolute inset-0 overflow-hidden rounded-3xl">
-                  <Image
-                    src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg"
-                    alt="Coffee Culture"
-                    fill
-                    className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A2A]/80 to-transparent"></div>
-                <div className="relative h-full p-6 flex flex-col justify-between">
-                  <div>
-                    <span className="inline-block px-3 py-1 bg-[#805C6F]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-3 backdrop-blur-sm">
-                      ☕ COFFEE ROASTERY
-                    </span>
-                    <h4 className="text-lg font-bold text-[#EAEAEA] mb-2 leading-tight">
-                      Artisan Bean Co: Weekly Coffee Education Content
-                    </h4>
+                {/* Quick Tips with Image */}
+                <div className="group relative overflow-hidden bg-gradient-to-br from-[#5A3D48]/30 to-[#805C6F]/20 backdrop-blur-lg rounded-3xl border border-[#5A3D48]/30 hover:border-[#805C6F]/60 transition-all duration-300 hover:scale-105">
+                  <div className="absolute inset-0 overflow-hidden rounded-3xl">
+                    <Image
+                      src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+                      alt="Eco Tips"
+                      fill
+                      className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
+                    />
                   </div>
-                  <div className="text-sm text-[#D4B5C8] font-medium">
-                    6 min read
-                  </div>
-                </div>
-              </div>
-
-              {/* Urban Gardening with Image */}
-              <div className="group relative overflow-hidden bg-gradient-to-br from-[#9A4453]/20 to-[#C5768A]/20 backdrop-blur-lg rounded-3xl border border-[#9A4453]/30 hover:border-[#C5768A]/60 transition-all duration-300 hover:scale-105">
-                <div className="absolute inset-0 overflow-hidden rounded-3xl">
-                  <Image
-                    src="https://images.pexels.com/photos/1454794/pexels-photo-1454794.jpeg"
-                    alt="Urban Gardening"
-                    fill
-                    className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A2A]/80 to-transparent"></div>
-                <div className="relative h-full p-6 flex flex-col justify-between">
-                  <div>
-                    <span className="inline-block px-3 py-1 bg-[#9A4453]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-3 backdrop-blur-sm">
-                      🌱 LANDSCAPING FIRM
-                    </span>
-                    <h4 className="text-lg font-bold text-[#EAEAEA] mb-2 leading-tight">
-                      GreenSpace Solutions: Seasonal Garden Tips Blog
-                    </h4>
-                  </div>
-                  <div className="text-sm text-[#D4B5C8] font-medium">
-                    4 min read
-                  </div>
-                </div>
-              </div>
-
-              {/* How-to Guide with Image */}
-              <div className="md:col-span-2 group relative overflow-hidden bg-gradient-to-br from-[#C5768A]/20 to-[#D4B5C8]/20 backdrop-blur-lg rounded-3xl border border-[#C5768A]/30 hover:border-[#D4B5C8]/60 transition-all duration-300 hover:scale-[1.02]">
-                <div className="absolute inset-0 overflow-hidden rounded-3xl">
-                  <Image
-                    src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg"
-                    alt="Smart Home Guide"
-                    fill
-                    className="object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-300"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#2A2A2A]/80 to-[#2A2A2A]/60"></div>
-                <div className="relative h-full p-6 flex flex-col justify-between">
-                  <div>
-                    <span className="inline-block px-4 py-2 bg-[#C5768A]/40 border border-[#D4B5C8]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-4 backdrop-blur-sm">
-                      🏠 HOME AUTOMATION
-                    </span>
-                    <h4 className="text-xl font-bold text-[#EAEAEA] mb-3 leading-tight">
-                      SmartTech Innovations: DIY Smart Home Installation Guides
-                    </h4>
-                    <p className="text-[#D4B5C8] text-sm leading-relaxed">
-                      &ldquo;We use Ventriloquist to create detailed
-                      installation guides for our smart home products. Customer
-                      support tickets dropped 60% since launching our knowledge
-                      base...&rdquo;
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex space-x-2">
-                      <span className="px-3 py-1 bg-[#9A4453]/30 rounded-full text-xs text-[#C5768A] font-medium">
-                        #DIY
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A2A]/80 to-transparent"></div>
+                  <div className="relative h-full p-6 flex flex-col justify-between">
+                    <div>
+                      <span className="inline-block px-3 py-1 bg-[#5A3D48]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-3 backdrop-blur-sm">
+                        ♻️ ECO BRAND
                       </span>
-                      <span className="px-3 py-1 bg-[#805C6F]/30 rounded-full text-xs text-[#D4B5C8] font-medium">
-                        #SmartHome
-                      </span>
+                      <h4 className="text-lg font-bold text-[#EAEAEA] mb-2 leading-tight">
+                        EcoLiving Co: Daily Sustainability Tips
+                      </h4>
                     </div>
-                    <span className="text-sm text-[#D4B5C8] font-medium">
-                      15 min read
-                    </span>
+                    <div className="text-sm text-[#D4B5C8] font-medium">
+                      2 min read
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Quick Tips with Image */}
-              <div className="group relative overflow-hidden bg-gradient-to-br from-[#5A3D48]/30 to-[#805C6F]/20 backdrop-blur-lg rounded-3xl border border-[#5A3D48]/30 hover:border-[#805C6F]/60 transition-all duration-300 hover:scale-105">
-                <div className="absolute inset-0 overflow-hidden rounded-3xl">
-                  <Image
-                    src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
-                    alt="Eco Tips"
-                    fill
-                    className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A2A]/80 to-transparent"></div>
-                <div className="relative h-full p-6 flex flex-col justify-between">
-                  <div>
-                    <span className="inline-block px-3 py-1 bg-[#5A3D48]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-3 backdrop-blur-sm">
-                      ♻️ ECO BRAND
-                    </span>
-                    <h4 className="text-lg font-bold text-[#EAEAEA] mb-2 leading-tight">
-                      EcoLiving Co: Daily Sustainability Tips
-                    </h4>
+                {/* Recipe/Tutorial with Image */}
+                <div className="group relative overflow-hidden bg-gradient-to-br from-[#D4B5C8]/20 to-[#C5768A]/20 backdrop-blur-lg rounded-3xl border border-[#D4B5C8]/30 hover:border-[#C5768A]/60 transition-all duration-300 hover:scale-105">
+                  <div className="absolute inset-0 overflow-hidden rounded-3xl">
+                    <Image
+                      src="https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg"
+                      alt="Cold Brew Recipe"
+                      fill
+                      className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
+                    />
                   </div>
-                  <div className="text-sm text-[#D4B5C8] font-medium">
-                    2 min read
-                  </div>
-                </div>
-              </div>
-
-              {/* Recipe/Tutorial with Image */}
-              <div className="group relative overflow-hidden bg-gradient-to-br from-[#D4B5C8]/20 to-[#C5768A]/20 backdrop-blur-lg rounded-3xl border border-[#D4B5C8]/30 hover:border-[#C5768A]/60 transition-all duration-300 hover:scale-105">
-                <div className="absolute inset-0 overflow-hidden rounded-3xl">
-                  <Image
-                    src="https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg"
-                    alt="Cold Brew Recipe"
-                    fill
-                    className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-300"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A2A]/80 to-transparent"></div>
-                <div className="relative h-full p-6 flex flex-col justify-between">
-                  <div>
-                    <span className="inline-block px-3 py-1 bg-[#D4B5C8]/40 rounded-full text-xs text-[#2A2A2A] font-bold mb-3 backdrop-blur-sm">
-                      🍽️ FOOD BLOG
-                    </span>
-                    <h4 className="text-lg font-bold text-[#EAEAEA] mb-2 leading-tight">
-                      Coastal Kitchen: Weekly Recipe Features
-                    </h4>
-                  </div>
-                  <div className="text-sm text-[#D4B5C8] font-medium">
-                    3 min read
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2A2A2A]/80 to-transparent"></div>
+                  <div className="relative h-full p-6 flex flex-col justify-between">
+                    <div>
+                      <span className="inline-block px-3 py-1 bg-[#D4B5C8]/40 rounded-full text-xs text-[#2A2A2A] font-bold mb-3 backdrop-blur-sm">
+                        🍽️ FOOD BLOG
+                      </span>
+                      <h4 className="text-lg font-bold text-[#EAEAEA] mb-2 leading-tight">
+                        Coastal Kitchen: Weekly Recipe Features
+                      </h4>
+                    </div>
+                    <div className="text-sm text-[#D4B5C8] font-medium">
+                      3 min read
+                    </div>
                   </div>
                 </div>
               </div>
