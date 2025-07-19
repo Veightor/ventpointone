@@ -42,7 +42,7 @@
 
 ## 🔮 **Future Package Additions**
 
-### **High Priority (Phase 0.5)**
+### **High Priority (Phase 0.1)**
 
 ```json
 {

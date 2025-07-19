@@ -40,7 +40,7 @@ export default function Home() {
           <div className="mb-8 flex justify-center">
             <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/10 border border-white/20 text-gray-300 backdrop-blur-sm transition-all duration-300 hover:bg-white/15 hover:border-white/30 hover:text-white">
               <span className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></span>
-              A KorBon.AI Product — Phase 0.5 Beta
+              A KorBon.AI Product — Phase 0.1 Beta
             </span>
           </div>
 
@@ -1097,11 +1097,13 @@ export default function Home() {
                   </div>
                   <div className="bg-gradient-to-br from-[#805C6F]/30 to-[#D4B5C8]/20 p-6 rounded-2xl border border-[#805C6F]/40">
                     <div className="text-3xl font-black text-[#D4B5C8] mb-2">
-                      Phase 0.5
+                      Phase 0.1
                     </div>
-                    <div className="text-[#EAEAEA] font-bold">Dogfood Beta</div>
+                    <div className="text-[#EAEAEA] font-bold">
+                      Alpha Release
+                    </div>
                     <div className="text-sm text-[#805C6F] mt-2">
-                      Enhanced UX & features
+                      Core platform foundation
                     </div>
                   </div>
                   <div className="col-span-2 bg-gradient-to-br from-[#5A3D48]/30 to-[#2A2A2A]/30 p-6 rounded-2xl border border-[#5A3D48]/40">
