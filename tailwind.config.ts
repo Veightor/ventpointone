@@ -14,6 +14,9 @@ const config: Config = {
         "shadowed-plum": "var(--shadowed-plum)",
         "desaturated-white": "var(--desaturated-white)",
       },
+      animation: {
+        "spin-slow": "spin 20s linear infinite",
+      },
     },
   },
 };

@@ -241,6 +241,267 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Content Showcase */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Artistic Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-transparent rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-tl from-purple-500/10 via-pink-500/5 to-transparent rounded-full blur-2xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-emerald-500/5 via-teal-500/5 to-transparent rounded-full blur-3xl animate-spin-slow"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="mb-6">
+              <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-200 border border-indigo-400/30 backdrop-blur-sm">
+                🌟 Featured Content
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white via-gray-100 to-gray-200 bg-clip-text text-transparent">
+                Content That Converts
+              </span>
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Real examples of AI-generated content that is driving engagement,
+              traffic, and results for creators worldwide.
+            </p>
+          </div>
+
+          {/* Content Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {/* Featured Article 1 - Large */}
+            <div className="md:col-span-2 lg:col-span-2 group relative">
+              <div className="relative overflow-hidden bg-gradient-to-br from-slate-800/80 to-slate-900/90 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-cyan-500/20 hover:border-cyan-400/30 h-80">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/20 via-blue-600/10 to-indigo-600/20"></div>
+                <div className="absolute top-0 left-0 w-full h-full opacity-10">
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-transparent to-white/5"></div>
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-white/5"></div>
+                </div>
+
+                {/* Content */}
+                <div className="relative p-8 h-full flex flex-col justify-between z-10">
+                  <div>
+                    <div className="mb-4">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-cyan-500/20 text-cyan-300 border border-cyan-400/30">
+                        🚀 TECHNOLOGY
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4 leading-tight group-hover:text-cyan-100 transition-colors">
+                      The Future of Sustainable Computing: How Green AI is
+                      Reshaping Technology
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed mb-6">
+                      Exploring how artificial intelligence is becoming more
+                      environmentally conscious, from energy-efficient
+                      algorithms to carbon-neutral data centers...
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">AI</span>
+                      </div>
+                      <span className="ml-3 text-sm text-gray-400">
+                        AI Generated
+                      </span>
+                    </div>
+                    <span className="text-sm text-gray-400">12 min read</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Featured Article 2 */}
+            <div className="group relative">
+              <div className="relative overflow-hidden bg-gradient-to-br from-slate-800/80 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-white/10 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-purple-500/20 hover:border-purple-400/30 h-80">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-pink-600/10 to-rose-600/20"></div>
+
+                <div className="relative p-6 h-full flex flex-col justify-between z-10">
+                  <div>
+                    <div className="mb-3">
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-purple-500/20 text-purple-300 border border-purple-400/30">
+                        ☕ LIFESTYLE
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-3 leading-tight">
+                      Third Wave Coffee Culture
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                      Discover the artisanal coffee movement revolutionizing how
+                      we experience our daily brew...
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-gray-400">6 min read</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Featured Article 3 */}
+            <div className="group relative">
+              <div className="relative overflow-hidden bg-gradient-to-br from-slate-800/80 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-white/10 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-emerald-500/20 hover:border-emerald-400/30 h-64">
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/20 via-green-600/10 to-teal-600/20"></div>
+
+                <div className="relative p-6 h-full flex flex-col justify-between z-10">
+                  <div>
+                    <div className="mb-3">
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+                        🌱 GARDENING
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-3 leading-tight">
+                      Urban Rooftop Gardens
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Transform your city space into a green oasis with these
+                      innovative gardening techniques...
+                    </p>
+                  </div>
+                  <span className="text-xs text-gray-400">4 min read</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Featured Article 4 */}
+            <div className="group relative">
+              <div className="relative overflow-hidden bg-gradient-to-br from-slate-800/80 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-white/10 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-orange-500/20 hover:border-orange-400/30 h-64">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 via-red-600/10 to-pink-600/20"></div>
+
+                <div className="relative p-6 h-full flex flex-col justify-between z-10">
+                  <div>
+                    <div className="mb-3">
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-orange-500/20 text-orange-300 border border-orange-400/30">
+                        🍽️ RECIPE
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-3 leading-tight">
+                      Organic Cold Brew
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Master the perfect cold brew with organic beans and
+                      traditional techniques...
+                    </p>
+                  </div>
+                  <span className="text-xs text-gray-400">3 min read</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Featured Article 5 */}
+            <div className="group relative">
+              <div className="relative overflow-hidden bg-gradient-to-br from-slate-800/80 to-slate-900/90 backdrop-blur-xl rounded-2xl border border-white/10 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-blue-500/20 hover:border-blue-400/30 h-64">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-indigo-600/10 to-purple-600/20"></div>
+
+                <div className="relative p-6 h-full flex flex-col justify-between z-10">
+                  <div>
+                    <div className="mb-3">
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-300 border border-blue-400/30">
+                        💡 QUICK TIPS
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-3 leading-tight">
+                      5 Eco-Friendly Swaps
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Simple changes that make a big environmental impact in
+                      your daily routine...
+                    </p>
+                  </div>
+                  <span className="text-xs text-gray-400">2 min read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <a href="/demo" className="group inline-flex items-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-purple-600 hover:to-pink-600 rounded-2xl font-semibold text-white transition-all duration-300 transform hover:scale-105 shadow-xl shadow-indigo-500/25">
+                Create Your Own Content
+                <svg
+                  className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats & Metrics Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 to-black/20"></div>
+
+        <div className="relative max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {/* Stat 1 */}
+            <div className="text-center group">
+              <div className="relative">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                  2.4M+
+                </div>
+                <div className="text-sm text-gray-400 uppercase tracking-wider">
+                  Words Generated
+                </div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+              </div>
+            </div>
+
+            {/* Stat 2 */}
+            <div className="text-center group">
+              <div className="relative">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                  47s
+                </div>
+                <div className="text-sm text-gray-400 uppercase tracking-wider">
+                  Avg Generation Time
+                </div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500/10 to-green-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+              </div>
+            </div>
+
+            {/* Stat 3 */}
+            <div className="text-center group">
+              <div className="relative">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                  94%
+                </div>
+                <div className="text-sm text-gray-400 uppercase tracking-wider">
+                  SEO Score
+                </div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+              </div>
+            </div>
+
+            {/* Stat 4 */}
+            <div className="text-center group">
+              <div className="relative">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                  12+
+                </div>
+                <div className="text-sm text-gray-400 uppercase tracking-wider">
+                  Content Types
+                </div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Border Separator */}
       <div className="h-px bg-gradient-to-r from-transparent via-[#805C6F]/50 to-transparent"></div>
 
