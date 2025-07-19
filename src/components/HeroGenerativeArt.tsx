@@ -40,8 +40,8 @@ export default function HeroGenerativeArt() {
     const initParticles = () => {
       particles.length = 0;
 
-      // Central flow particles - reduced count
-      for (let i = 0; i < 8; i++) {
+      // Central flow particles - ultra reduced count
+      for (let i = 0; i < 4; i++) {
         particles.push({
           x: canvas.width * 0.1 + Math.random() * canvas.width * 0.8,
           y: canvas.height * 0.2 + Math.random() * canvas.height * 0.6,
@@ -51,13 +51,13 @@ export default function HeroGenerativeArt() {
           vy: 0,
           size: 2 + Math.random() * 3,
           phase: Math.random() * Math.PI * 2,
-          speed: 0.01 + Math.random() * 0.02,
+          speed: 0.003 + Math.random() * 0.005,
           type: "flow",
         });
       }
 
-      // Title area accent particles - reduced
-      for (let i = 0; i < 4; i++) {
+      // Title area accent particles - ultra reduced
+      for (let i = 0; i < 2; i++) {
         particles.push({
           x: canvas.width * 0.2 + Math.random() * canvas.width * 0.6,
           y: canvas.height * 0.3 + Math.random() * canvas.height * 0.2,
@@ -67,13 +67,13 @@ export default function HeroGenerativeArt() {
           vy: 0,
           size: 1.5 + Math.random() * 2,
           phase: Math.random() * Math.PI * 2,
-          speed: 0.005 + Math.random() * 0.01,
+          speed: 0.002 + Math.random() * 0.004,
           type: "accent",
         });
       }
 
-      // Border flow elements - reduced
-      for (let i = 0; i < 6; i++) {
+      // Border flow elements - ultra reduced
+      for (let i = 0; i < 3; i++) {
         const side = Math.floor(Math.random() * 4);
         let x, y;
 
@@ -104,7 +104,7 @@ export default function HeroGenerativeArt() {
           vy: 0,
           size: 1 + Math.random() * 2,
           phase: Math.random() * Math.PI * 2,
-          speed: 0.008 + Math.random() * 0.015,
+          speed: 0.002 + Math.random() * 0.005,
           type: "border",
         });
       }
@@ -117,7 +117,7 @@ export default function HeroGenerativeArt() {
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      time += 0.016;
+      time += 0.008;
 
       // Waves removed to reduce visual noise
 
@@ -134,7 +134,7 @@ export default function HeroGenerativeArt() {
             const distToCenter = Math.sqrt(
               (particle.x - centerX) ** 2 + (particle.y - centerY) ** 2
             );
-            const attraction = 0.001;
+            const attraction = 0.0003;
 
             particle.vx += (centerX - particle.x) * attraction;
             particle.vy += (centerY - particle.y) * attraction;
@@ -166,8 +166,8 @@ export default function HeroGenerativeArt() {
             const targetX = canvas.width * (0.3 + Math.random() * 0.4);
             const targetY = canvas.height * (0.3 + Math.random() * 0.4);
 
-            particle.vx += (targetX - particle.x) * 0.0005;
-            particle.vy += (targetY - particle.y) * 0.0005;
+            particle.vx += (targetX - particle.x) * 0.0002;
+            particle.vy += (targetY - particle.y) * 0.0002;
             particle.vx *= 0.995;
             particle.vy *= 0.995;
 
@@ -302,6 +302,7 @@ export default function HeroGenerativeArt() {
         width: "100%",
         height: "100%",
         zIndex: 1,
+        opacity: 0.6,
       }}
     />
   );
