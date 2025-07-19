@@ -62,98 +62,155 @@ export default function Home() {
             </div>
           </div>
 
-          {/* App Thumbnail Style Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16 max-w-4xl mx-auto">
-            {/* Try Ventriloquist */}
+          {/* Ultra Modern App Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 max-w-5xl mx-auto">
+            {/* Try Ventriloquist - Cosmic Blue */}
             <a href="/demo" className="group relative block">
-              <div className="relative bg-gradient-to-br from-blue-600/80 to-blue-800/80 backdrop-blur-xl rounded-2xl p-6 border border-blue-500/20 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-blue-500/80 hover:to-blue-700/80 hover:border-blue-400/30 hover:shadow-3xl">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="text-3xl">🎭</div>
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <svg
-                      className="w-5 h-5 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
+              <div className="relative overflow-hidden bg-gradient-to-br from-cyan-400/20 via-blue-500/30 to-indigo-600/40 backdrop-blur-2xl rounded-3xl border border-cyan-300/20 shadow-2xl transition-all duration-500 hover:scale-[1.03] hover:shadow-cyan-500/25 hover:border-cyan-400/40">
+                {/* Animated Background Orbs */}
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-cyan-400/30 to-blue-500/20 rounded-full blur-xl transition-all duration-700 group-hover:scale-150 group-hover:rotate-45"></div>
+                <div className="absolute -bottom-6 -left-8 w-24 h-24 bg-gradient-to-tr from-indigo-500/20 to-cyan-400/30 rounded-full blur-lg transition-all duration-500 group-hover:scale-125"></div>
+
+                {/* Content */}
+                <div className="relative p-8 z-10">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="text-5xl drop-shadow-lg transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
+                      🎭
+                    </div>
+                    <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                      <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
+                        <svg
+                          className="w-4 h-4 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={3}
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent leading-tight">
+                      Try Ventriloquist
+                    </h3>
+                    <div className="h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"></div>
+                    <p className="text-sm text-cyan-100/80 leading-relaxed font-medium">
+                      AI-powered blog generation in seconds
+                    </p>
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  Try Ventriloquist Now
-                </h3>
-                <p className="text-xs text-blue-100 leading-relaxed">
-                  AI-powered blog generation
-                </p>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-blue-300/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Hover Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/5 to-blue-500/0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </a>
 
-            {/* Experimental Prompt Lab */}
+            {/* Experimental Prompt Lab - Electric Green */}
             <a href="/prompt-lab" className="group relative block">
-              <div className="relative bg-gradient-to-br from-emerald-600/80 to-emerald-800/80 backdrop-blur-xl rounded-2xl p-6 border border-emerald-500/20 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-emerald-500/80 hover:to-emerald-700/80 hover:border-emerald-400/30 hover:shadow-3xl">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="text-3xl">🧪</div>
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <svg
-                      className="w-5 h-5 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
+              <div className="relative overflow-hidden bg-gradient-to-br from-emerald-400/20 via-green-500/30 to-teal-600/40 backdrop-blur-2xl rounded-3xl border border-emerald-300/20 shadow-2xl transition-all duration-500 hover:scale-[1.03] hover:shadow-emerald-500/25 hover:border-emerald-400/40">
+                {/* Geometric Background Elements */}
+                <div className="absolute top-4 right-4 w-16 h-16 border-2 border-emerald-400/30 rotate-45 transition-all duration-700 group-hover:rotate-[225deg] group-hover:scale-150"></div>
+                <div className="absolute bottom-6 left-6 w-12 h-12 bg-gradient-to-br from-green-400/40 to-teal-500/20 transform rotate-12 transition-all duration-500 group-hover:rotate-45 group-hover:scale-125"></div>
+                <div className="absolute top-1/2 left-1/2 w-8 h-8 bg-emerald-400/20 rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-all duration-700 group-hover:scale-200 blur-sm"></div>
+
+                {/* Content */}
+                <div className="relative p-8 z-10">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="text-5xl drop-shadow-lg transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12">
+                      🧪
+                    </div>
+                    <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                      <div className="w-8 h-8 bg-gradient-to-r from-emerald-400 to-green-500 rounded-lg rotate-45 flex items-center justify-center">
+                        <svg
+                          className="w-4 h-4 text-white -rotate-45"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={3}
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold bg-gradient-to-r from-white via-emerald-100 to-green-200 bg-clip-text text-transparent leading-tight">
+                      Experimental Lab
+                    </h3>
+                    <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent"></div>
+                    <p className="text-sm text-emerald-100/80 leading-relaxed font-medium">
+                      Wild AI input interfaces & experiments
+                    </p>
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  Experimental Prompt Lab
-                </h3>
-                <p className="text-xs text-emerald-100 leading-relaxed">
-                  Unique AI input interfaces
-                </p>
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/10 to-emerald-300/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Electric Border Animation */}
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/0 via-emerald-400/10 to-green-500/0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </a>
 
-            {/* Emotion Alchemy Lab */}
+            {/* Emotion Alchemy Lab - Mystic Purple */}
             <a href="/emotion-alchemy" className="group relative block">
-              <div className="relative bg-gradient-to-br from-indigo-600/80 to-purple-800/80 backdrop-blur-xl rounded-2xl p-6 border border-indigo-500/20 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-indigo-500/80 hover:to-purple-700/80 hover:border-indigo-400/30 hover:shadow-3xl">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="text-3xl">⚗️</div>
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <svg
-                      className="w-5 h-5 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
+              <div className="relative overflow-hidden bg-gradient-to-br from-purple-400/20 via-indigo-500/30 to-pink-600/40 backdrop-blur-2xl rounded-3xl border border-purple-300/20 shadow-2xl transition-all duration-500 hover:scale-[1.03] hover:shadow-purple-500/25 hover:border-purple-400/40">
+                {/* Magical Particle Effects */}
+                <div className="absolute top-6 left-8 w-3 h-3 bg-purple-400 rounded-full opacity-60 transition-all duration-1000 group-hover:animate-bounce"></div>
+                <div className="absolute top-12 right-12 w-2 h-2 bg-pink-400 rounded-full opacity-40 transition-all duration-700 group-hover:animate-ping"></div>
+                <div className="absolute bottom-8 right-8 w-4 h-4 bg-indigo-400 rounded-full opacity-50 transition-all duration-500 group-hover:animate-pulse"></div>
+
+                {/* Mystical Orb */}
+                <div className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-purple-500/30 via-pink-500/20 to-indigo-500/30 rounded-full blur-xl transition-all duration-700 group-hover:scale-150 group-hover:rotate-180"></div>
+
+                {/* Content */}
+                <div className="relative p-8 z-10">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="text-5xl drop-shadow-lg transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                      ⚗️
+                    </div>
+                    <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100">
+                      <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center relative">
+                        <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full animate-ping opacity-30"></div>
+                        <svg
+                          className="w-4 h-4 text-white relative z-10"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={3}
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold bg-gradient-to-r from-white via-purple-100 to-pink-200 bg-clip-text text-transparent leading-tight">
+                      Emotion Alchemy
+                    </h3>
+                    <div className="h-px bg-gradient-to-r from-transparent via-purple-400/50 to-transparent"></div>
+                    <p className="text-sm text-purple-100/80 leading-relaxed font-medium">
+                      Transmute emotions into content magic
+                    </p>
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  Emotion Alchemy Lab
-                </h3>
-                <p className="text-xs text-indigo-100 leading-relaxed">
-                  Create unique content moods
-                </p>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-indigo-300/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Mystical Glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-400/0 via-purple-400/5 to-pink-500/0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </a>
           </div>
