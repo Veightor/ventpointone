@@ -62,16 +62,16 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Apple TV Style Menu Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16 max-w-6xl mx-auto">
-            {/* Primary Action - Try Ventriloquist */}
-            <a href="/demo" className="group relative block lg:col-span-2">
-              <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-6 border border-white/10 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-gray-700/80 hover:to-gray-800/80 hover:border-white/20 hover:shadow-3xl">
+          {/* App Thumbnail Style Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16 max-w-4xl mx-auto">
+            {/* Try Ventriloquist */}
+            <a href="/demo" className="group relative block">
+              <div className="relative bg-gradient-to-br from-blue-600/80 to-blue-800/80 backdrop-blur-xl rounded-2xl p-6 border border-blue-500/20 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-blue-500/80 hover:to-blue-700/80 hover:border-blue-400/30 hover:shadow-3xl">
                 <div className="flex items-center justify-between mb-3">
-                  <div className="text-4xl">🎭</div>
+                  <div className="text-3xl">🎭</div>
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <svg
-                      className="w-6 h-6 text-white"
+                      className="w-5 h-5 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -85,19 +85,19 @@ export default function Home() {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <h3 className="text-lg font-semibold text-white mb-2">
                   Try Ventriloquist Now
                 </h3>
-                <p className="text-sm text-gray-400 leading-relaxed">
-                  Get started with AI-powered blog generation in seconds
+                <p className="text-xs text-blue-100 leading-relaxed">
+                  AI-powered blog generation
                 </p>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-blue-300/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </a>
 
             {/* Experimental Prompt Lab */}
             <a href="/prompt-lab" className="group relative block">
-              <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-6 border border-white/10 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-gray-700/80 hover:to-gray-800/80 hover:border-white/20 hover:shadow-3xl">
+              <div className="relative bg-gradient-to-br from-emerald-600/80 to-emerald-800/80 backdrop-blur-xl rounded-2xl p-6 border border-emerald-500/20 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-emerald-500/80 hover:to-emerald-700/80 hover:border-emerald-400/30 hover:shadow-3xl">
                 <div className="flex items-center justify-between mb-3">
                   <div className="text-3xl">🧪</div>
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -119,16 +119,16 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Experimental Prompt Lab
                 </h3>
-                <p className="text-xs text-gray-400 leading-relaxed">
+                <p className="text-xs text-emerald-100 leading-relaxed">
                   Unique AI input interfaces
                 </p>
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/10 to-emerald-300/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </a>
 
             {/* Emotion Alchemy Lab */}
             <a href="/emotion-alchemy" className="group relative block">
-              <div className="relative bg-gradient-to-br from-indigo-800/80 to-purple-900/80 backdrop-blur-xl rounded-2xl p-6 border border-indigo-500/20 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-indigo-700/80 hover:to-purple-800/80 hover:border-indigo-400/30 hover:shadow-3xl">
+              <div className="relative bg-gradient-to-br from-indigo-600/80 to-purple-800/80 backdrop-blur-xl rounded-2xl p-6 border border-indigo-500/20 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-indigo-500/80 hover:to-purple-700/80 hover:border-indigo-400/30 hover:shadow-3xl">
                 <div className="flex items-center justify-between mb-3">
                   <div className="text-3xl">⚗️</div>
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -150,41 +150,10 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Emotion Alchemy Lab
                 </h3>
-                <p className="text-xs text-gray-300 leading-relaxed">
+                <p className="text-xs text-indigo-100 leading-relaxed">
                   Create unique content moods
                 </p>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-            </a>
-
-            {/* Live Demo */}
-            <a href="/demo" className="group relative block lg:col-span-2">
-              <div className="relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-xl rounded-2xl p-6 border border-white/[0.08] shadow-xl transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-gray-700/60 hover:to-gray-800/60 hover:border-white/15 hover:shadow-2xl">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="text-3xl">▶️</div>
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  Live Demo
-                </h3>
-                <p className="text-sm text-gray-400 leading-relaxed">
-                  Watch KorBIN in action with real-time generation
-                </p>
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-500/5 to-gray-400/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-indigo-300/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </a>
           </div>
