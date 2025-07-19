@@ -660,8 +660,8 @@ export default function Home() {
               </span>
             </h3>
             <p className="text-center text-[#805C6F] mb-12 max-w-2xl mx-auto">
-              From tech deep-dives to lifestyle tips, see the variety of
-              professional content Ventriloquist creates
+              Real businesses using Ventriloquist to create professional content
+              across industries and drive meaningful engagement
             </p>
 
             {/* Enhanced Bento Grid with Images */}
@@ -680,16 +680,17 @@ export default function Home() {
                 <div className="relative h-full p-8 flex flex-col justify-between">
                   <div>
                     <span className="inline-block px-4 py-2 bg-[#9A4453]/40 border border-[#C5768A]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-4 backdrop-blur-sm">
-                      🔬 TECHNOLOGY
+                      💻 TECH STARTUP
                     </span>
                     <h4 className="text-2xl font-bold text-[#EAEAEA] mb-3 leading-tight">
-                      The Future of Sustainable Computing: How Green AI is
-                      Reshaping Technology
+                      CloudVault Technologies: How We Scale Content Marketing
+                      with AI-Generated Technical Blogs
                     </h4>
                     <p className="text-[#D4B5C8] leading-relaxed">
-                      Exploring how artificial intelligence is becoming more
-                      environmentally conscious, from energy-efficient
-                      algorithms to carbon-neutral data centers...
+                      &ldquo;Ventriloquist helps us create 12+ technical
+                      articles per month about cloud infrastructure, DevOps, and
+                      emerging technologies. Our organic traffic increased 340%
+                      in 6 months...&rdquo;
                     </p>
                   </div>
                   <div className="flex items-center justify-between">
@@ -720,10 +721,10 @@ export default function Home() {
                 <div className="relative h-full p-6 flex flex-col justify-between">
                   <div>
                     <span className="inline-block px-3 py-1 bg-[#805C6F]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-3 backdrop-blur-sm">
-                      ☕ LIFESTYLE
+                      ☕ COFFEE ROASTERY
                     </span>
                     <h4 className="text-lg font-bold text-[#EAEAEA] mb-2 leading-tight">
-                      Third Wave Coffee Culture
+                      Artisan Bean Co: Weekly Coffee Education Content
                     </h4>
                   </div>
                   <div className="text-sm text-[#D4B5C8] font-medium">
@@ -746,10 +747,10 @@ export default function Home() {
                 <div className="relative h-full p-6 flex flex-col justify-between">
                   <div>
                     <span className="inline-block px-3 py-1 bg-[#9A4453]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-3 backdrop-blur-sm">
-                      🌱 GARDENING
+                      🌱 LANDSCAPING FIRM
                     </span>
                     <h4 className="text-lg font-bold text-[#EAEAEA] mb-2 leading-tight">
-                      Urban Rooftop Gardens
+                      GreenSpace Solutions: Seasonal Garden Tips Blog
                     </h4>
                   </div>
                   <div className="text-sm text-[#D4B5C8] font-medium">
@@ -772,14 +773,16 @@ export default function Home() {
                 <div className="relative h-full p-6 flex flex-col justify-between">
                   <div>
                     <span className="inline-block px-4 py-2 bg-[#C5768A]/40 border border-[#D4B5C8]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-4 backdrop-blur-sm">
-                      📚 HOW-TO GUIDE
+                      🏠 HOME AUTOMATION
                     </span>
                     <h4 className="text-xl font-bold text-[#EAEAEA] mb-3 leading-tight">
-                      Building Your First Smart Home Ecosystem on a Budget
+                      SmartTech Innovations: DIY Smart Home Installation Guides
                     </h4>
                     <p className="text-[#D4B5C8] text-sm leading-relaxed">
-                      A step-by-step guide to creating an intelligent, connected
-                      home without breaking the bank...
+                      &ldquo;We use Ventriloquist to create detailed
+                      installation guides for our smart home products. Customer
+                      support tickets dropped 60% since launching our knowledge
+                      base...&rdquo;
                     </p>
                   </div>
                   <div className="flex items-center justify-between">
@@ -812,10 +815,10 @@ export default function Home() {
                 <div className="relative h-full p-6 flex flex-col justify-between">
                   <div>
                     <span className="inline-block px-3 py-1 bg-[#5A3D48]/40 rounded-full text-xs text-[#EAEAEA] font-bold mb-3 backdrop-blur-sm">
-                      ⚡ QUICK TIPS
+                      ♻️ ECO BRAND
                     </span>
                     <h4 className="text-lg font-bold text-[#EAEAEA] mb-2 leading-tight">
-                      5 Eco-Friendly Swaps
+                      EcoLiving Co: Daily Sustainability Tips
                     </h4>
                   </div>
                   <div className="text-sm text-[#D4B5C8] font-medium">
@@ -838,10 +841,10 @@ export default function Home() {
                 <div className="relative h-full p-6 flex flex-col justify-between">
                   <div>
                     <span className="inline-block px-3 py-1 bg-[#D4B5C8]/40 rounded-full text-xs text-[#2A2A2A] font-bold mb-3 backdrop-blur-sm">
-                      🥤 RECIPE
+                      🍽️ FOOD BLOG
                     </span>
                     <h4 className="text-lg font-bold text-[#EAEAEA] mb-2 leading-tight">
-                      Organic Cold Brew
+                      Coastal Kitchen: Weekly Recipe Features
                     </h4>
                   </div>
                   <div className="text-sm text-[#D4B5C8] font-medium">
