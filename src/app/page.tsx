@@ -102,6 +102,30 @@ export default function Home() {
             </div>
 
             <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#5A3D48] via-[#805C6F] to-[#C5768A] rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              <a href="/prompt-lab" className="relative block">
+                <button className="relative px-10 py-4 bg-gradient-to-r from-[#5A3D48] to-[#805C6F] hover:from-[#805C6F] hover:to-[#C5768A] rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-[#5A3D48]/25 text-[#EAEAEA] border border-[#805C6F]/30">
+                  🧪 Experimental Prompt Lab
+                  <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">
+                    →
+                  </span>
+                </button>
+              </a>
+            </div>
+
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              <a href="/emotion-alchemy" className="relative block">
+                <button className="relative px-10 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-purple-600 hover:to-pink-600 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-indigo-600/25 text-[#EAEAEA] border border-purple-600/30">
+                  ⚗️ Emotion Alchemy Lab
+                  <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">
+                    →
+                  </span>
+                </button>
+              </a>
+            </div>
+
+            <div className="group relative">
               <a href="/demo" className="relative block">
                 <button className="relative px-10 py-4 border-2 border-[#805C6F] hover:border-[#C5768A] rounded-xl font-bold text-lg transition-all duration-300 hover:bg-[#805C6F]/10 text-[#805C6F] hover:text-[#C5768A] backdrop-blur-sm">
                   Live Demo
