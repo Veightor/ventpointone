@@ -1,8 +1,6 @@
 import Image from "next/image";
 import AutomatedBlogShowcase from "../components/AutomatedBlogShowcase";
 import HomeRecentPosts from "../components/HomeRecentPosts";
-import HeroGenerativeArt from "../components/HeroGenerativeArt";
-import HeroMouseTracker from "../components/HeroMouseTracker";
 
 export default function Home() {
   return (
@@ -11,12 +9,6 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#2A2A2A] via-[#5A3D48] to-[#2A2A2A]"></div>
-
-        {/* Hero Generative Art */}
-        <HeroGenerativeArt />
-
-        {/* Mouse-Responsive Elements */}
-        <HeroMouseTracker />
 
         {/* Enhanced Floating Elements - harmonized with generative art */}
         <div className="absolute inset-0 overflow-hidden">
@@ -60,10 +52,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center z-20">
           {/* Status Badge with Generative Enhancement */}
           <div className="mb-8 flex justify-center">
-            <span
-              className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/10 border border-white/20 text-gray-300 backdrop-blur-sm transition-all duration-300 hover:bg-white/15 hover:border-white/30 hover:text-white magnetic-pull hero-title-emerge"
-              style={{ animationDelay: "0.1s" }}
-            >
+            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/10 border border-white/20 text-gray-300 backdrop-blur-sm transition-all duration-300 hover:bg-white/15 hover:border-white/30 hover:text-white">
               <span className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></span>
               A KorBon.AI Product — Phase 0.1 Beta
             </span>
@@ -71,39 +60,27 @@ export default function Home() {
 
           {/* Main Title with Enhanced Generative Design */}
           <div className="mb-12 relative">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight hero-title-emerge">
-              <span className="bg-gradient-to-r from-white via-gray-100 to-gray-200 bg-clip-text text-transparent hero-glow gradient-shift">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight">
+              <span className="bg-gradient-to-r from-white via-gray-100 to-gray-200 bg-clip-text text-transparent">
                 KorBIN
               </span>
-              <span
-                className="block text-4xl md:text-5xl lg:text-6xl font-light text-gray-400 mt-2 hero-title-emerge"
-                style={{ animationDelay: "0.3s" }}
-              >
+              <span className="block text-4xl md:text-5xl lg:text-6xl font-light text-gray-400 mt-2">
                 view
               </span>
             </h1>
 
             {/* Enhanced Subtitle */}
-            <div
-              className="text-lg md:text-xl text-gray-300 font-normal mb-8 max-w-3xl mx-auto leading-relaxed hero-title-emerge"
-              style={{ animationDelay: "0.5s" }}
-            >
+            <div className="text-lg md:text-xl text-gray-300 font-normal mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your interests into professional blogs using advanced AI
               that writes, designs, and publishes automatically
             </div>
           </div>
 
-          {/* Apple TV Style Cards with Generative Enhancement */}
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16 max-w-4xl mx-auto hero-title-emerge"
-            style={{ animationDelay: "0.7s" }}
-          >
+          {/* Apple TV Style Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16 max-w-4xl mx-auto">
             {/* Try Ventriloquist - Cosmic Blue */}
             <a href="/demo" className="group relative block">
-              <div
-                className="relative overflow-hidden bg-gradient-to-br from-cyan-400/20 via-blue-500/30 to-indigo-600/40 backdrop-blur-2xl rounded-2xl border border-cyan-300/20 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-cyan-500/25 hover:border-cyan-400/40 w-full h-48 magnetic-pull"
-                style={{ "--delay": "0.5s" } as React.CSSProperties}
-              >
+              <div className="relative overflow-hidden bg-gradient-to-br from-cyan-400/20 via-blue-500/30 to-indigo-600/40 backdrop-blur-2xl rounded-2xl border border-cyan-300/20 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-cyan-500/25 hover:border-cyan-400/40 w-full h-48">
                 {/* Animated Background Orbs */}
                 <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-cyan-400/30 to-blue-500/20 rounded-full blur-lg transition-all duration-700 group-hover:scale-150 group-hover:rotate-45"></div>
                 <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-tr from-indigo-500/20 to-cyan-400/30 rounded-full blur-md transition-all duration-500 group-hover:scale-125"></div>
@@ -151,10 +128,7 @@ export default function Home() {
 
             {/* Experimental Prompt Lab - Electric Green */}
             <a href="/prompt-lab" className="group relative block">
-              <div
-                className="relative overflow-hidden bg-gradient-to-br from-emerald-400/20 via-green-500/30 to-teal-600/40 backdrop-blur-2xl rounded-2xl border border-emerald-300/20 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-emerald-500/25 hover:border-emerald-400/40 w-full h-48 magnetic-pull"
-                style={{ "--delay": "1s" } as React.CSSProperties}
-              >
+              <div className="relative overflow-hidden bg-gradient-to-br from-emerald-400/20 via-green-500/30 to-teal-600/40 backdrop-blur-2xl rounded-2xl border border-emerald-300/20 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-emerald-500/25 hover:border-emerald-400/40 w-full h-48">
                 {/* Geometric Background Elements */}
                 <div className="absolute top-3 right-3 w-10 h-10 border-2 border-emerald-400/30 rotate-45 transition-all duration-700 group-hover:rotate-[225deg] group-hover:scale-150"></div>
                 <div className="absolute bottom-4 left-4 w-8 h-8 bg-gradient-to-br from-green-400/40 to-teal-500/20 transform rotate-12 transition-all duration-500 group-hover:rotate-45 group-hover:scale-125"></div>
@@ -203,10 +177,7 @@ export default function Home() {
 
             {/* Emotion Alchemy Lab - Mystic Purple */}
             <a href="/emotion-alchemy" className="group relative block">
-              <div
-                className="relative overflow-hidden bg-gradient-to-br from-purple-400/20 via-indigo-500/30 to-pink-600/40 backdrop-blur-2xl rounded-2xl border border-purple-300/20 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-purple-500/25 hover:border-purple-400/40 w-full h-48 magnetic-pull"
-                style={{ "--delay": "1.5s" } as React.CSSProperties}
-              >
+              <div className="relative overflow-hidden bg-gradient-to-br from-purple-400/20 via-indigo-500/30 to-pink-600/40 backdrop-blur-2xl rounded-2xl border border-purple-300/20 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-purple-500/25 hover:border-purple-400/40 w-full h-48">
                 {/* Magical Particle Effects */}
                 <div className="absolute top-4 left-6 w-2 h-2 bg-purple-400 rounded-full opacity-60 transition-all duration-1000 group-hover:animate-bounce"></div>
                 <div className="absolute top-8 right-8 w-1.5 h-1.5 bg-pink-400 rounded-full opacity-40 transition-all duration-700 group-hover:animate-ping"></div>
